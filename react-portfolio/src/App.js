@@ -1,5 +1,8 @@
+import './App.scss';
+
 import { useState } from 'react';
 import { Contacts } from './components/Contacts/Contacts';
+
 
 function App() {
   const [lang, setLang] = useState('ru');

@@ -1,0 +1,167 @@
+.contacts {
+    width: 400px;
+    height: fit-content;
+    padding: 50px;
+    border: 1px solid #565656;
+    border-radius: 20px;
+    background-color: #212529;
+    color: #F9FAFD;
+    position: relative;
+
+    &__communication-wrapper,
+    &__social-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    &__credentials-wrapper {
+        display: block;
+        align-items: start;
+        text-align: center;
+    }
+
+    &__name {
+        font-size: 24px;
+        // max-width: 150px;
+    }
+
+    &__job-title {
+        font-weight: 300;
+        font-size: 14px;
+        // text-align: end;
+    }
+
+    &__avatar {
+        border-radius: 20px;
+        margin-top: 30px;
+        filter: grayscale(100%);
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            filter: none;
+        }
+    }
+
+    &__email {
+        display: block;
+        margin: 30px auto 0;
+        width: fit-content;
+        font-size: 20px;
+    }
+
+    &__communication-wrapper,
+    &__social-list {
+        justify-content: center;
+    }
+
+    &__communication-wrapper {
+        margin-top: 10px;
+    }
+
+    &__communication-wrapper path {
+        fill: #28e98c;
+    }
+
+    &__social-wrapper {
+        margin-top: 30px;
+    }
+
+    &__social-list-item+&__social-list-item {
+        margin-left: 10px;
+    }
+
+    &__social-item-link {
+        display: flex;
+        border: 1px solid #565656;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s ease-in-out;
+
+        & path {
+            fill: #565656;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            border-color: #28e98c;
+        }
+
+        &:hover path {
+            fill: #28e98c;
+        }
+    }
+
+    &__social-item-link-icon {
+        max-width: 24px;
+        max-height: 24px;
+    }
+
+    &__form-link {
+        display: block;
+        width: 100%;
+        background-color: #28e98c;
+        text-align: center;
+        color: #333;
+        height: 40px;
+        padding: 9px;
+        border: 1px solid #28e98c;
+        border-radius: 20px;
+        transition: all .3s ease-in-out;
+        margin-top: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & path {
+            transition: all .3s ease-in-out;
+            fill: #212529;
+        }
+
+        &:hover {
+            background-color: transparent;
+            border-color: #28e98c;
+            color: #28e98c;
+
+            & path {
+                fill: #28e98c;
+            }
+        }
+    }
+
+    &__form-link-text {
+        margin-left: 10px;
+    }
+
+    &__location {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    &__settings-btn {
+        position: absolute;
+        cursor: pointer;
+        top: -15px;
+        left: -15px;
+        border-radius: 50%;
+        background-color: #212529;
+        border: none;
+        transition: all .3s ease-in-out;
+
+        & path {
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            transform: rotate(45deg);
+
+            & path {
+                fill: #28e98c;
+            }
+        }
+    }
+}
