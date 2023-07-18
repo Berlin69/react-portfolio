@@ -1,10 +1,12 @@
-import './App.scss';
-import Info from './components/Info/Info';
+import { useState } from 'react';
+import { Contacts } from './components/Contacts/Contacts';
 
 function App() {
+  const [lang, setLang] = useState('ru');
+
   return (
     <>
-      <Info />
+      <Contacts lang={lang} />
     </>
   );
 }

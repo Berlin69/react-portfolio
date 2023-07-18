@@ -2,15 +2,17 @@ export const contactsContent = {
   ru: {
     name: 'Виталий Сизяков',
     jobTitle: 'Frontend-разработчик',
-    eMail: 'vitalii.siziakov@gmail.com',
+    email: 'Vitalii.Siziakov@gmail.com',
     location: 'Тбилиси, Грузия',
-    contactButtonTitle: 'Связаться',
+    contactLinkTitle: 'Связаться',
+    socials: [],
   },
   en: {
     name: 'Vitalii Siziakov',
     jobTitle: 'Frontend-developer',
-    eMail: 'vitalii.siziakov@gmail.com',
+    email: 'Vitalii.Siziakov@gmail.com',
     location: 'Tbilisi, Georgia',
-    contactButtonTitle: 'Contact me',
+    contactLinkTitle: 'Contact me',
+    socials: [],
   },
 };
