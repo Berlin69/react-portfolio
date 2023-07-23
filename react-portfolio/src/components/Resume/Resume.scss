@@ -1,0 +1,14 @@
+@import '../../index.scss';
+
+.resume {
+    padding-top: 100px;
+
+    &__title {
+        font-size: 48px;
+        font-weight: 300;
+        line-height: 60px;
+        max-width: 630px;
+        margin: 50px 0 30px;
+        color: $whiteColor;
+    }
+}

@@ -1,0 +1,74 @@
+@import '../../../../index.scss';
+
+.experience-item {
+    display: flex;
+
+    &:hover &__timeline-circle,
+    &:hover &__timeline-line {
+        background-color: $accentColor;
+    }
+
+    &:hover &__info-dates {
+        color: $accentColor;
+    }
+
+    &__timeline-circle {
+        width: 16px;
+        height: 16px;
+        background-color: #999;
+        border-radius: 50%;
+        transition: all .3s ease-in-out;
+    }
+
+    &__timeline-line {
+        width: 2px;
+        height: 100%;
+        background-color: #999;
+        margin-left: 7px;
+        transition: all .3s ease-in-out;
+    }
+
+    &__info {
+        margin-left: 50px;
+    }
+
+    &__info-dates {
+        color: #999;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1;
+        transition: all .3s ease-in-out;
+    }
+
+    &__info-position {
+        margin-top: 20px;
+        color: $whiteColor;
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    &__info-company {
+        margin-top: 5px;
+        color: #999;
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    &__info-list {
+        // margin-top: 20px;
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+
+    &__info-list-item {
+        color: #999;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+    &__info-list-item+&__info-list-item {
+        margin-top: 10px;
+    }
+}

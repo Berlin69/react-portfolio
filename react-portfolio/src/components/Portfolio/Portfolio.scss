@@ -1,0 +1,76 @@
+@import '../../index.scss';
+
+.portfolio {
+    &__projects-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 850px;
+
+    }
+
+    &__item {
+        // max-height: 450px;
+        max-width: 410px;
+
+        // overflow: hidden;
+        margin-bottom: 50px;
+
+        &:hover .portfolio__item-tech-list-item {
+            background-color: #000;
+            color: $whiteColor;
+        }
+
+        &:hover .portfolio__item-name {
+            border-bottom: 1px solid $whiteColor;
+        }
+    }
+
+    &__item-wide {
+        max-width: 850px;
+    }
+
+    &__item-content {
+        position: relative;
+    }
+
+    &__item-content-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        min-height: 450px;
+    }
+
+    &__item-tech-list {
+        position: absolute;
+        flex-wrap: wrap;
+        bottom: 10px;
+        left: 15px;
+        display: flex;
+    }
+
+    &__item-tech-list-item {
+        color: #000;
+        padding: 10px 15px;
+        background-color: $whiteColor;
+        border-radius: 20px;
+        transition: all .3s ease-in-out;
+        margin: 10px 5px;
+    }
+
+    // &__item-tech-list-item+&__item-tech-list-item {
+    //     margin-left: 10px;
+    // }
+
+    &__item-name {
+        width: fit-content;
+        color: $whiteColor;
+        margin-top: 30px;
+        font-size: 24px;
+        font-weight: 300;
+        border-bottom: 1px solid transparent;
+        transition: all .3s ease-in-out;
+    }
+
+}
