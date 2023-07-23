@@ -52,9 +52,9 @@ export const Portfolio = (props) => {
     return (
         <section className="portfolio">
             <div className="container">
-                <div className="portfolio__inner">
+                <div className="portfolio__inner" id='portfolio'>
                     <Title
-                        icon={'images/png/home.png'}
+                        icon={'images/png/portfolio.png'}
                         title={'ПОРТФОЛИО'}
                     />
 

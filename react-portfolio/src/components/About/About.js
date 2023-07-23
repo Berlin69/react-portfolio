@@ -5,9 +5,9 @@ export const About = (props) => {
     return (
         <section className='about'>
             <div className="container">
-                <div className="about__inner">
+                <div className="about__inner" id='about'>
                     <Title
-                        icon={'images/png/home.png'}
+                        icon={'images/png/about.png'}
                         title={'ОБО МНЕ'}
                     />
                     <div className="about__content">

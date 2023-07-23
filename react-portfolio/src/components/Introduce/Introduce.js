@@ -3,7 +3,7 @@ import { Title } from '../Title/Title';
 
 export const Introduce = (props) => {
     return (
-        <section className="introduce">
+        <section className="introduce" id='home'>
             <div className="container">
                 <div className="introduce__inner">
                     <Title

@@ -58,9 +58,9 @@ export const Resume = (props) => {
     return (
         <section className="resume">
             <div className="container">
-                <div className="resume__inner">
+                <div className="resume__inner" id='resume'>
                     <Title
-                        icon={'images/png/home.png'}
+                        icon={'images/png/resume.png'}
                         title={'РЕЗЮМЕ'}
                     />
                     <h3 className="resume__title">
