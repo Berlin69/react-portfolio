@@ -11,6 +11,7 @@ import { Portfolio } from './components/Portfolio/Portfolio';
 import { Hiring } from './components/Hiring/Hiring';
 import { Feedback } from './components/Feedback/Feedback';
 import { Menu } from './components/Menu/Menu';
+import { Info } from './components/Info/Info';
 
 
 function App() {
@@ -18,16 +19,20 @@ function App() {
 
   return (
     <>
-      <Menu />
-      <Contacts lang={lang} />
-      <Introduce lang={lang} />
-      <About lang={lang} />
-      <Resume lang={lang} />
-      <Skills lang={lang} />
-      <Portfolio lang={lang} />
-      <Feedback lang={lang} />
-      <Hiring lang={lang} />
+      <div className="app-container">
+        <Menu />
+        <Info lang={lang} />
+        <Contacts lang={lang} />
+        <Introduce lang={lang} />
+        <About lang={lang} />
+        <Resume lang={lang} />
+        <Skills lang={lang} />
+        <Portfolio lang={lang} />
+        <Feedback lang={lang} />
+        <Hiring lang={lang} />
+      </div>
     </>
+
   );
 }
 

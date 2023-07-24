@@ -3,6 +3,10 @@
 .feedback {
     padding-top: 100px;
 
+    &__inner {
+        margin-left: 200px;
+    }
+
     &__box-content {
         max-width: 850px;
         height: fit-content;
@@ -98,5 +102,18 @@
         font-weight: 300;
         padding: 0 10px;
         width: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .feedback {
+        &__box-content-text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &__box-content {
+            padding: 30px;
+        }
     }
 }

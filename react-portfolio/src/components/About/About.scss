@@ -3,6 +3,10 @@
 .about {
     padding-top: 100px;
 
+    &__inner {
+        margin-left: 200px;
+    }
+
     &__content {
         color: $whiteColor;
         margin-top: 40px;
@@ -22,5 +26,23 @@
         color: #999;
         font-size: 16px;
         margin-top: 30px;
+    }
+
+}
+
+@media (max-width:900px) {
+    .introduce {
+        &__projects-btn-wrapper {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .introduce {
+        &__greetings-text {
+            font-size: 48px;
+            line-height: 52px;
+        }
     }
 }

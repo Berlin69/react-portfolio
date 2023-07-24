@@ -6,12 +6,17 @@
         justify-content: space-between;
         flex-wrap: wrap;
         max-width: 850px;
+    }
 
+    &__inner {
+        margin-left: 200px;
     }
 
     &__item {
         // max-height: 450px;
-        max-width: 410px;
+        max-width: 390px;
+        // min-width: 350px;
+        width: 100%;
 
         // overflow: hidden;
         margin-bottom: 50px;
@@ -73,4 +78,13 @@
         transition: all .3s ease-in-out;
     }
 
+}
+
+@media (max-width: 950px) {
+    .portfolio {
+        &__item {
+            max-width: 850px;
+            min-width: none;
+        }
+    }
 }

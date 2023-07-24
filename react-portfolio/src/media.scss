@@ -1,0 +1,128 @@
+@media (max-width: 1220px) {
+    .feedback {
+        &__inner {
+            margin-left: 0;
+        }
+    }
+
+    .about {
+        &__inner {
+            margin-left: 0;
+        }
+    }
+
+    .hiring {
+        &__inner {
+            margin-left: 0;
+        }
+    }
+
+    .introduce {
+        &__inner {
+            margin-left: 0;
+        }
+    }
+
+    .portfolio {
+        &__inner {
+            margin-left: 0;
+        }
+    }
+
+    .resume {
+        &__inner {
+            margin-left: 0;
+        }
+    }
+
+    .resume {
+        &__inner {
+            margin-left: 0;
+        }
+    }
+
+    .skills {
+        &__inner {
+            margin-left: 0;
+        }
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .info {
+        padding-top: 0;
+
+        &__inner {
+            padding-right: 120px;
+        }
+    }
+
+    .feedback {
+        padding-top: 0;
+
+        &__inner {
+            padding-right: 120px;
+        }
+    }
+
+    .about {
+        padding-top: 0;
+
+        &__inner {
+            padding-right: 120px;
+        }
+    }
+
+    .hiring {
+        padding-top: 0;
+
+        &__inner {
+            padding-right: 120px;
+        }
+    }
+
+    .introduce {
+        padding-top: 0;
+
+        &__inner {
+            padding-right: 120px;
+        }
+
+        &__projects-svg-wrapper {
+            margin-left: 0;
+        }
+    }
+
+    .portfolio {
+        padding-top: 0;
+
+        &__inner {
+            padding-right: 120px;
+        }
+    }
+
+    .resume {
+        padding-top: 0;
+
+        &__inner {
+            padding-right: 120px;
+        }
+    }
+
+    .skills {
+        padding-top: 0;
+
+        &__inner {
+            padding-right: 70px;
+        }
+    }
+}
+
+@media (max-width: 825px) {
+    .info {
+        &__person {
+            display: block;
+        }
+    }
+}

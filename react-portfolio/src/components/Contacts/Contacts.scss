@@ -1,5 +1,5 @@
 .contacts {
-    width: 400px;
+    max-width: 400px;
     height: fit-content;
     padding: 50px;
     border: 1px solid #565656;
@@ -7,8 +7,12 @@
     background-color: #212529;
     color: #F9FAFD;
     position: fixed;
-    top: 50px;
-    left: 50px;
+    // top: 50px;
+    top: 10%;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
 
     &__communication-wrapper,
     &__social-list {
@@ -166,5 +170,37 @@
                 fill: #28e98c;
             }
         }
+    }
+}
+
+@media (max-width: 1490px) {
+    .contacts {
+        max-width: 330px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .contacts {
+        padding: 25px;
+        max-width: 270px;
+
+        &__name {
+            font-size: 20px;
+        }
+
+        &__email {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        &__location {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 1220px) {
+    .contacts {
+        display: none;
     }
 }

@@ -4,6 +4,10 @@
     width: 100%;
     background-color: #212529;
 
+    &__inner {
+        margin-left: 200px;
+    }
+
     &__greetings-wrapper {
         margin-top: 50px;
         color: $whiteColor;

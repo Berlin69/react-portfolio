@@ -1,0 +1,168 @@
+@import '../../index.scss';
+
+.info {
+    padding-top: 100px;
+    display: none;
+
+    &__person {
+        display: flex;
+    }
+
+    &__person-img {
+        max-width: 450px;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    &__person-info {
+        padding-top: 50px;
+        margin-left: 40px;
+    }
+
+    &__job-title {
+        font-size: 20px;
+        font-weight: 300;
+        color: $whiteColor;
+    }
+
+    &__name {
+        font-size: 36px;
+        line-height: 28px;
+        font-weight: bold;
+        color: $whiteColor;
+        margin-top: 20px;
+    }
+
+    &__email {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 20px;
+        color: $whiteColor;
+        margin-top: 20px;
+    }
+
+    &__location-wrapper {
+        display: flex;
+        margin-top: 20px;
+        width: fit-content;
+
+        & path {
+            fill: $accentColor;
+        }
+    }
+
+    &__location {
+        margin-left: 10px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    &__social-list {
+        margin-top: 20px;
+        display: flex;
+        width: fit-content;
+    }
+
+    &__social-list-item+&__social-list-item {
+        margin-left: 10px;
+    }
+
+    &__social-item-link {
+        display: flex;
+        border: 1px solid #565656;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s ease-in-out;
+
+        & path {
+            fill: #565656;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            border-color: #28e98c;
+        }
+
+        &:hover path {
+            fill: #28e98c;
+        }
+    }
+
+    &__social-item-link-icon {
+        max-width: 24px;
+        max-height: 24px;
+    }
+
+    &__form-link {
+        display: block;
+        width: 100%;
+        background-color: #28e98c;
+        text-align: center;
+        color: #333;
+        height: 50px;
+        padding: 9px;
+        border: 1px solid #28e98c;
+        border-radius: 20px;
+        transition: all .3s ease-in-out;
+        margin-top: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & path {
+            transition: all .3s ease-in-out;
+            fill: #212529;
+        }
+
+        &:hover {
+            background-color: transparent;
+            border-color: #28e98c;
+            color: #28e98c;
+
+            & path {
+                fill: #28e98c;
+            }
+        }
+    }
+
+    &__form-link-text {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1220px) {
+    .info {
+        display: block;
+    }
+}
+
+@media (max-width: 825px) {
+    .info {
+        &__person {
+            display: block;
+            text-align: center;
+        }
+
+        &__person-img {
+            margin: 0 auto;
+        }
+
+        &__location-wrapper {
+            margin: 20px auto 0;
+        }
+
+        &__social-list {
+            margin: 20px auto 0;
+        }
+
+        &__form-link {
+            margin: 30px auto 0;
+            max-width: 60%;
+        }
+    }
+}

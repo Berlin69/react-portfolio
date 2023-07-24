@@ -1,3 +1,5 @@
+@import './media.scss';
+
 $whiteColor: #fff;
 $borderColor: #565656;
 $accentColor: #28e98c;
@@ -22,7 +24,10 @@ code {
 }
 
 .container {
-  margin-left: 600px;
+  padding: 0 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+  // margin-left: 600px;
 }
 
 .text-accent {
@@ -44,3 +49,5 @@ code {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 1000px) {}
