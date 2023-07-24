@@ -3,10 +3,14 @@ import './Menu.scss';
 
 export const Menu = (props) => {
 
-    const [isDayTheme, setIsDayTheme] = useState(true);
-
-    const handleSwitch = () => {
+    const [isDayTheme, setIsDayTheme] = useState(false);
+    const handleThemeSwitch = () => {
         setIsDayTheme(!isDayTheme);
+    }
+
+    const [isRuLang, setIsRuLang] = useState(false);
+    const handleLangSwitch = () => {
+        setIsRuLang(!isRuLang);
     }
 
     return (
@@ -34,7 +38,7 @@ export const Menu = (props) => {
             </a>
             <div className="menu__switcher">
                 <div
-                    onClick={handleSwitch}
+                    onClick={handleThemeSwitch}
                     className="menu__switcher-theme">
                     <div className={`menu__switcher-theme-day ${isDayTheme ? 'menu__switcher-theme-day--active' : ''}`}>
                         <svg width={15} height={15} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,6 +51,15 @@ export const Menu = (props) => {
                             <path d="M12.2717 2.35233L10.2995 3.82919L11.0088 6.15868L8.95869 4.78078L6.90854 6.15868L7.6179 3.82919L5.64571 2.35233L8.13239 2.28381L8.95869 0L9.78498 2.28381L12.2717 2.35233ZM15 7.6127L13.7216 8.56429L14.1815 10.0716L12.8563 9.18092L11.5311 10.0716L11.991 8.56429L10.7126 7.6127L12.3184 7.57464L12.8563 6.09016L13.3942 7.57464L15 7.6127ZM13.2227 11.381C13.8697 11.3201 14.5635 12.2184 14.1503 12.7893C13.9009 13.1319 13.6358 13.4516 13.3084 13.7562C10.2605 16.7479 5.3261 16.7479 2.28596 13.7562C-0.761985 10.7872 -0.761985 5.96075 2.28596 2.99179C2.59777 2.68728 2.92517 2.41323 3.27595 2.16962C3.8606 1.76615 4.78043 2.44368 4.71807 3.07553C4.5076 5.25277 5.25594 7.51374 6.9709 9.18092C7.7813 9.97662 8.76246 10.5867 9.84359 10.9672C10.9247 11.3476 12.0788 11.489 13.2227 11.381ZM11.9443 12.9188C9.65583 12.7903 7.49396 11.851 5.86397 10.2771C4.1724 8.60997 3.26816 6.4708 3.14343 4.32402C0.952969 6.7144 1.03872 10.3837 3.38508 12.6828C5.73925 14.9742 9.49656 15.0579 11.9443 12.9188Z" fill="white" />
                         </svg>
                     </div>
+                </div>
+            </div>
+            <div className="menu__switcher">
+                <div
+                    onClick={handleLangSwitch}
+                    className="menu__switcher-lang">
+                    <span className={`menu__switcher-lang-ru ${isRuLang ? 'menu__switcher-lang-ru--active' : ''}`}>ru</span>
+                    <div className={`menu__switcher-lang-checker ${isRuLang ? 'menu__switcher-lang-checker--active' : ''}`}></div>
+                    <span className={`menu__switcher-lang-en ${isRuLang ? '' : 'menu__switcher-lang-en--active'}`}>en</span>
                 </div>
             </div>
             {/* <a href="#home" className="menu__link">
