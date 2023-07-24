@@ -3,57 +3,17 @@ import { EducationItem } from './Components/EducationItem/EducationItem';
 import { ExperienceItem } from './Components/ExperienceItem/ExperienceItem';
 import './Resume.scss';
 
+import { resumeContent } from '../__data/resume-data';
+
 export const Resume = (props) => {
 
-    const experienceList = [
-        {
-            duration: 'апрель 2022 - настоящее время',
-            position: 'Front-end React Developer',
-            company: 'ArtGeneration.me',
-            duties: [
-                'создание архитектуры веб-приложения с помощью HTML/CSS/JS на библиотеке React',
-                'поиск и оценка решений для оптимизации взаимодействия фронтенда и бэкенда',
-                'рефакторинг и оптимизация текущего функционала'
-            ],
-        },
-
-        {
-            duration: 'декабрь 2020 - май 2022',
-            position: 'Front-end Developer',
-            company: 'Авто Премиум',
-            duties: [
-                'Разработка программной онлайн-платформы для Отдела Продаж',
-                'рефакторинг и оптимизация текущего функционала',
-            ],
-        },
-        {
-            duration: 'декабрь 2020 - настоящее время',
-            position: 'Front-end Developer',
-            company: 'Freelance',
-            duties: [
-                'Разработка сайтов с помощью HTML, CSS, JavaScript, WordPress',
-                'Внесение правок в сайты, разработка нового функционала',
-            ],
-        },
-    ]
-
-    const educationList = [
-        {
-            duration: '2022',
-            position: 'React. Разработка сложных клиентских приложений',
-            company: 'HTML Academy',
-        },
-        {
-            duration: '2020',
-            position: 'JavaScript. Архитектура клиентских приложений',
-            company: 'HTML Academy',
-        },
-        {
-            duration: '2020',
-            position: 'JavaScript. Профессиональная разработка веб-интерфейсов',
-            company: 'HTML Academy',
-        },
-    ]
+    const { lang } = props;
+    const {
+        sectionTitle,
+        experience,
+        education,
+        experienceList,
+        educationList } = resumeContent[lang];
 
     return (
         <section className="resume">
@@ -61,10 +21,10 @@ export const Resume = (props) => {
                 <div className="resume__inner" id='resume'>
                     <Title
                         icon={'images/png/resume.png'}
-                        title={'РЕЗЮМЕ'}
+                        title={sectionTitle}
                     />
                     <h3 className="resume__title">
-                        <span className='text-accent'>Опыт работы</span>
+                        <span className='text-accent'>{experience}</span>
                     </h3>
 
                     {experienceList.map((item) => {
@@ -73,7 +33,7 @@ export const Resume = (props) => {
                         )
                     })}
                     <h3 className="resume__title">
-                        Обучение
+                        {education}
                     </h3>
 
                     {educationList.map((item) => {

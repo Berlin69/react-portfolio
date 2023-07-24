@@ -1,6 +1,7 @@
 import { Title } from '../Title/Title';
 import './About.scss';
 
+
 export const About = (props) => {
     return (
         <section className='about'>

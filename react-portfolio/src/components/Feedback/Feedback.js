@@ -2,7 +2,18 @@ import { useEffect, useState } from 'react';
 import { Title } from '../Title/Title';
 import './Feedback.scss';
 
+import { feedbackContent } from '../__data/feedback-data';
+
 export const Feedback = (props) => {
+
+    const { lang } = props;
+    const {
+        sectionTitle,
+        textBeforeAccent,
+        textAccent,
+        projectLinkText,
+        feedbacks
+    } = feedbackContent[lang];
 
     const [clickCounter, setClickCounter] = useState(1);
     const [selectedFeedback, setSelectedFeedback] = useState(0);
@@ -24,32 +35,6 @@ export const Feedback = (props) => {
         }
     }, [clickCounter])
 
-    const feedbacks = [
-        {
-            name: 'Александра Медзиновская',
-            image: "images/jpg/avatar.jpg",
-            position: 'Основатель',
-            company: 'IV Medical',
-            feedback: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure eius placeat nihil tempora. Molestiae neque vitae id eius distinctio, excepturi nobis, ex dignissimos deleniti beatae odio quaerat laudantium libero ratione!',
-            projectLink: 'https://artgeneration.me',
-        },
-        {
-            name: 'Сергей Иванов',
-            image: "images/jpg/avatar.jpg",
-            position: 'Основатель',
-            company: 'NovAutoTour',
-            feedback: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure eius placeat nihil tempora. Molestiae neque vitae id eius distinctio, excepturi nobis, ex dignissimos deleniti beatae odio quaerat laudantium libero ratione!',
-            projectLink: 'https://artgeneration.me',
-        },
-        {
-            name: 'Виталий Сизяков',
-            image: "images/jpg/avatar.jpg",
-            position: 'CEI in',
-            company: 'Company',
-            feedback: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure eius placeat nihil tempora. Molestiae neque vitae id eius distinctio, excepturi nobis, ex dignissimos deleniti beatae odio quaerat laudantium libero ratione!',
-            projectLink: 'https://artgeneration.me',
-        },
-    ]
 
     return (
         <section className="feedback" id='feedback'>
@@ -57,10 +42,10 @@ export const Feedback = (props) => {
                 <div className="feedback__inner">
                     <Title
                         icon={'images/png/feedback.png'}
-                        title={'ОТЗЫВЫ'}
+                        title={sectionTitle}
                     />
                     <h3 className="resume__title">
-                        Отзывы о <span className='text-accent'>моей работе</span>
+                        {textBeforeAccent}<span className='text-accent'>{textAccent}</span>
                     </h3>
 
                     <div className="feedback__box">
@@ -83,7 +68,7 @@ export const Feedback = (props) => {
                                 "{feedbacks[selectedFeedback].feedback}"
                             </div>
                             <a className='feedback__box-content-link' href={feedbacks[selectedFeedback].projectLink} target='_blank' rel='noreferrer'>
-                                ПРОЕКТ
+                                {projectLinkText}
                             </a>
                         </div>
                         <div className="feedback__box-controls">

@@ -1,7 +1,7 @@
 import './App.scss';
 import './index.scss';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Contacts } from './components/Contacts/Contacts';
 import { Introduce } from './components/Introduce/Introduce';
 import { About } from './components/About/About';
@@ -16,11 +16,29 @@ import { Info } from './components/Info/Info';
 
 function App() {
   const [lang, setLang] = useState('ru');
+  const [isDayTheme, setIsDayTheme] = useState(false);
+  const [isRuLang, setIsRuLang] = useState(true);
 
+  const menuActions = {
+    isDayTheme,
+    setIsDayTheme,
+    isRuLang,
+    setIsRuLang,
+  }
+
+  useEffect(() => {
+    if (isRuLang) {
+      setLang('ru')
+    } else {
+      setLang('en')
+    }
+  }, [isRuLang])
   return (
     <>
       <div className="app-container">
-        <Menu />
+        <Menu
+          menuActions={menuActions}
+        />
         <Info lang={lang} />
         <Contacts lang={lang} />
         <Introduce lang={lang} />

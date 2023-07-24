@@ -1,23 +1,37 @@
 import './Introduce.scss';
 import { Title } from '../Title/Title';
 
+import { introduceContent } from '../__data/introduce-data';
+
 export const Introduce = (props) => {
+
+    const { lang } = props;
+    const { sectionTitle,
+        textBeforeName,
+        name,
+        textAfterName,
+        specialization,
+        experience,
+        experienceText,
+        projects,
+        projectsText, } = introduceContent[lang];
+
     return (
         <section className="introduce" id='home'>
             <div className="container">
                 <div className="introduce__inner">
                     <Title
                         icon={'images/png/home.png'}
-                        title={'ПРЕДСТАВЛЕНИЕ'}
+                        title={sectionTitle}
                     />
                     <div className="introduce__greetings-wrapper">
                         <h4 className="introduce__greetings-text">
-                            Привет! Меня зовут <span className='text-accent'>Виталий</span>, я Фронтенд-разработчик на React
+                            {textBeforeName}<span className='text-accent'>{name}</span>{textAfterName}
                         </h4>
                     </div>
                     <div className="introduce__specialization-wrapper">
                         <p className="introduce__specialization">
-                            Я разрабатываю сайты и веб-приложения
+                            {specialization}
                         </p>
                     </div>
                     <div className="introduce__projects-btn-wrapper">
@@ -33,18 +47,18 @@ export const Introduce = (props) => {
                     <div className="introduce__numbers-wrapper">
                         <div className="introduce__numbers-item">
                             <h5 className="introduce__number">
-                                2+
+                                {experience}
                             </h5>
                             <p className="introduce__number-text">
-                                года опыта
+                                {experienceText}
                             </p>
                         </div>
                         <div className="introduce__numbers-item">
                             <h5 className="introduce__number">
-                                8
+                                {projects}
                             </h5>
                             <p className="introduce__number-text">
-                                проектов выполнено
+                                {projectsText}
                             </p>
                         </div>
                     </div>

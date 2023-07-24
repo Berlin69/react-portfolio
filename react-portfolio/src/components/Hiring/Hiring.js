@@ -2,7 +2,16 @@ import { useState } from 'react';
 import { Title } from '../Title/Title';
 import './Hiring.scss';
 
+import { hiringContent } from '../__data/hiring-data';
+
 export const Hiring = (props) => {
+
+    const { lang } = props;
+    const {
+        sectionTitle,
+        buttonText,
+        activeButtonText
+    } = hiringContent[lang];
 
     const [isBonusOpen, setIsBonusOpen] = useState(false);
 
@@ -12,12 +21,12 @@ export const Hiring = (props) => {
                 <div className="hiring__inner">
                     <Title
                         icon={'images/png/hr.png'}
-                        title={'Для HR'}
+                        title={sectionTitle}
                     />
                     <button
                         onClick={() => setIsBonusOpen(!isBonusOpen)}
                         className="hiring__button">
-                        {isBonusOpen ? 'Скрыть информацию для HR' : 'Показать информацию для HR'}
+                        {isBonusOpen ? activeButtonText : buttonText}
                     </button>
 
                     {isBonusOpen

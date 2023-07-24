@@ -1,14 +1,18 @@
-import { useState } from 'react';
 import './Menu.scss';
 
 export const Menu = (props) => {
 
-    const [isDayTheme, setIsDayTheme] = useState(false);
+    const {
+        isDayTheme,
+        setIsDayTheme,
+        isRuLang,
+        setIsRuLang,
+    } = props.menuActions
+
     const handleThemeSwitch = () => {
         setIsDayTheme(!isDayTheme);
     }
 
-    const [isRuLang, setIsRuLang] = useState(false);
     const handleLangSwitch = () => {
         setIsRuLang(!isRuLang);
     }

@@ -9,7 +9,7 @@ export const contactsContent = {
   },
   en: {
     name: 'Vitalii Siziakov',
-    jobTitle: 'Frontend-developer',
+    jobTitle: 'Front-end Developer',
     email: 'Vitalii.Siziakov@gmail.com',
     location: 'Tbilisi, Georgia',
     contactLinkTitle: 'Contact me',
