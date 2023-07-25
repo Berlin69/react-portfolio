@@ -63,3 +63,8 @@ export const skillsList = [
         name: 'Webpack',
     },
 ]
+
+export const skillsImages = {
+    titleIconLight: 'images/png/skills.png',
+    titleIconDark: 'images/png/skillsDark.png',
+}

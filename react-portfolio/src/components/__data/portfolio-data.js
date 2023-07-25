@@ -98,3 +98,8 @@ export const portfolioContent = {
         ]
     }
 }
+
+export const portfolioImages = {
+    titleIconLight: 'images/png/portfolio.png',
+    titleIconDark: 'images/png/portfolioDark.png',
+}

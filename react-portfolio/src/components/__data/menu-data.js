@@ -1,0 +1,16 @@
+export const menuContent = {
+    homeIconLight: 'images/png/home.png',
+    homeIconDark: 'images/png/homeDark.png',
+    aboutIconLight: 'images/png/about.png',
+    aboutIconDark: 'images/png/aboutDark.png',
+    resumeIconLight: 'images/png/resume.png',
+    resumeIconDark: 'images/png/resumeDark.png',
+    skillsIconLight: 'images/png/skills.png',
+    skillsIconDark: 'images/png/skillsDark.png',
+    portfolioIconLight: 'images/png/portfolio.png',
+    portfolioIconDark: 'images/png/portfolioDark.png',
+    feedbackIconLight: 'images/png/feedback.png',
+    feedbackIconDark: 'images/png/feedbackDark.png',
+    hiringIconLight: 'images/png/hr.png',
+    hiringIconDark: 'images/png/hrDark.png',
+}

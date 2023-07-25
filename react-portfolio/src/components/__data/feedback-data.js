@@ -7,10 +7,10 @@ export const feedbackContent = {
         feedbacks: [
             {
                 name: 'Александра Медзиновская',
-                image: "images/jpg/avatar.jpg",
+                image: "images/png/alexandra.png",
                 position: 'Основатель',
                 company: 'IV Medical',
-                feedback: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure eius placeat nihil tempora. Molestiae neque vitae id eius distinctio, excepturi nobis, ex dignissimos deleniti beatae odio quaerat laudantium libero ratione!',
+                feedback: 'Максим, хотела бы поблагодарить Вас за работу над сайтом школы для врачей. Взаимодействие с Вами в процессе работы было очень комфортным, задачи выполнялись в срок, конечный результат соответствовал ожиданиям. С удовольствием обращусь в дальнейшем.',
                 projectLink: 'https://artgeneration.me',
             },
             {
@@ -39,10 +39,10 @@ export const feedbackContent = {
         feedbacks: [
             {
                 name: 'Alexandra Medzinovskaya',
-                image: "images/jpg/avatar.jpg",
+                image: "images/png/alexandra.png",
                 position: 'Founder of ',
                 company: 'IV Medical',
-                feedback: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure eius placeat nihil tempora. Molestiae neque vitae id eius distinctio, excepturi nobis, ex dignissimos deleniti beatae odio quaerat laudantium libero ratione!',
+                feedback: 'Maksim, I would like to thank you for developing the website of the school for doctors. Work with you was very comfortable, the tasks were completed on time, the result met expectations. I will be happy to work with you in the future.',
                 projectLink: 'https://artgeneration.me',
             },
             {
@@ -63,4 +63,9 @@ export const feedbackContent = {
             },
         ]
     }
+}
+
+export const feedbackImages = {
+    titleIconLight: 'images/png/feedback.png',
+    titleIconDark: 'images/png/feedbackDark.png',
 }

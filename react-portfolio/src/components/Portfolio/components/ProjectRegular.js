@@ -1,7 +1,10 @@
+import '../../../index.scss';
 import '../Portfolio.scss';
 
 export const ProjectRegular = (props) => {
 
+    const { isDayTheme } = props;
+    console.log(isDayTheme)
     const { image, name, link, wide, techStack } = props.project;
 
     return (
@@ -23,7 +26,7 @@ export const ProjectRegular = (props) => {
                     })}
                 </ul>
             </div>
-            <h4 className="portfolio__item-name">
+            <h4 className={`portfolio__item-name ${isDayTheme ? 'light' : ''}`}>
                 {name}
             </h4>
         </a>

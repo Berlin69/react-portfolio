@@ -4,10 +4,11 @@ import { ExperienceItem } from './Components/ExperienceItem/ExperienceItem';
 import './Resume.scss';
 
 import { resumeContent } from '../__data/resume-data';
+import { resumeImages } from '../__data/resume-data';
 
 export const Resume = (props) => {
 
-    const { lang } = props;
+    const { lang, isDayTheme } = props;
     const {
         sectionTitle,
         experience,
@@ -15,13 +16,19 @@ export const Resume = (props) => {
         experienceList,
         educationList } = resumeContent[lang];
 
+    const {
+        titleIconLight,
+        titleIconDark
+    } = resumeImages;
+
     return (
         <section className="resume">
             <div className="container">
                 <div className="resume__inner" id='resume'>
                     <Title
-                        icon={'images/png/resume.png'}
+                        icon={isDayTheme ? titleIconDark : titleIconLight}
                         title={sectionTitle}
+                        isDayTheme={isDayTheme}
                     />
                     <h3 className="resume__title">
                         <span className='text-accent'>{experience}</span>
@@ -29,16 +36,16 @@ export const Resume = (props) => {
 
                     {experienceList.map((item) => {
                         return (
-                            <ExperienceItem item={item} />
+                            <ExperienceItem item={item} isDayTheme={isDayTheme} />
                         )
                     })}
-                    <h3 className="resume__title">
+                    <h3 className={`resume__title ${isDayTheme ? 'light' : ''}`}>
                         {education}
                     </h3>
 
                     {educationList.map((item) => {
                         return (
-                            <EducationItem item={item} />
+                            <EducationItem item={item} isDayTheme={isDayTheme} />
                         )
                     })}
                 </div>

@@ -2,7 +2,7 @@ import '../ExperienceItem/ExperienceItem.scss';
 
 export const EducationItem = (props) => {
 
-    const { item } = props;
+    const { item, isDayTheme } = props;
     const { duration, position, company } = item;
 
     return (
@@ -15,7 +15,7 @@ export const EducationItem = (props) => {
                 <h6 className="experience-item__info-dates">
                     {duration}
                 </h6>
-                <h4 className="experience-item__info-position">
+                <h4 className={`experience-item__info-position ${isDayTheme ? 'light' : ''}`}>
                     {position}
                 </h4>
                 <h6 className="experience-item__info-company">

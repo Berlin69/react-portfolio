@@ -22,3 +22,10 @@ export const introduceContent = {
         projectsText: 'projects completed',
     }
 }
+
+export const introduceImages = {
+    titleIconLight: 'images/png/home.png',
+    titleIconDark: 'images/png/homeDark.png',
+    roundedTextLight: 'images/png/round-text.png',
+    roundedTextDark: 'images/png/round-text-dark.png',
+}

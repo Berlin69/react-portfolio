@@ -1,17 +1,23 @@
 import { useState } from 'react';
 import { Title } from '../Title/Title';
+import '../../index.scss';
 import './Hiring.scss';
 
 import { hiringContent } from '../__data/hiring-data';
+import { hiringImages } from '../__data/hiring-data';
 
 export const Hiring = (props) => {
 
-    const { lang } = props;
+    const { lang, isDayTheme } = props;
     const {
         sectionTitle,
         buttonText,
         activeButtonText
     } = hiringContent[lang];
+    const {
+        titleIconLight,
+        titleIconDark,
+    } = hiringImages;
 
     const [isBonusOpen, setIsBonusOpen] = useState(false);
 
@@ -20,8 +26,9 @@ export const Hiring = (props) => {
             <div className="container">
                 <div className="hiring__inner">
                     <Title
-                        icon={'images/png/hr.png'}
+                        icon={isDayTheme ? titleIconDark : titleIconLight}
                         title={sectionTitle}
+                        isDayTheme={isDayTheme}
                     />
                     <button
                         onClick={() => setIsBonusOpen(!isBonusOpen)}

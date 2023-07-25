@@ -17,7 +17,7 @@
         margin-top: 50px;
 
         &:hover {
-            background-color: #212529;
+            background-color: transparent;
             color: $accentColor;
         }
     }
@@ -31,8 +31,8 @@
     }
 
     &__bonus-image {
-        max-width: 415px;
-        max-height: 415px;
+        max-width: 390px;
+        max-height: 390px;
         margin-bottom: 30px;
         border-radius: 20px;
     }

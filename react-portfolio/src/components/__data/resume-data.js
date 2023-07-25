@@ -107,3 +107,8 @@ export const resumeContent = {
         ]
     }
 }
+
+export const resumeImages = {
+    titleIconLight: 'images/png/resume.png',
+    titleIconDark: 'images/png/resumeDark.png',
+}

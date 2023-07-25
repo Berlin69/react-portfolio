@@ -10,3 +10,8 @@ export const hiringContent = {
         activeButtonText: 'Hide info for HR',
     }
 }
+
+export const hiringImages = {
+    titleIconLight: 'images/png/hr.png',
+    titleIconDark: 'images/png/hrDark.png',
+}

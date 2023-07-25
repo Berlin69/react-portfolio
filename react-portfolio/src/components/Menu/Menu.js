@@ -1,5 +1,7 @@
 import './Menu.scss';
 
+import { menuContent } from '../__data/menu-data';
+
 export const Menu = (props) => {
 
     const {
@@ -7,9 +9,27 @@ export const Menu = (props) => {
         setIsDayTheme,
         isRuLang,
         setIsRuLang,
-    } = props.menuActions
+    } = props.menuActions;
+
+    const {
+        homeIconLight,
+        homeIconDark,
+        aboutIconLight,
+        aboutIconDark,
+        resumeIconLight,
+        resumeIconDark,
+        skillsIconLight,
+        skillsIconDark,
+        portfolioIconLight,
+        portfolioIconDark,
+        feedbackIconLight,
+        feedbackIconDark,
+        hiringIconLight,
+        hiringIconDark
+    } = menuContent;
 
     const handleThemeSwitch = () => {
+        console.log(isDayTheme)
         setIsDayTheme(!isDayTheme);
     }
 
@@ -20,25 +40,25 @@ export const Menu = (props) => {
     return (
         <div className='menu'>
             <a href="#home" className="menu__link">
-                <img className='menu__link-img' src="images/png/home.png" alt="home icon" />
+                <img className='menu__link-img' src={isDayTheme ? homeIconDark : homeIconLight} alt="home icon" />
             </a>
             <a href="#about" className="menu__link">
-                <img className='menu__link-img' src="images/png/about.png" alt="about icon" />
+                <img className='menu__link-img' src={isDayTheme ? aboutIconDark : aboutIconLight} alt="about icon" />
             </a>
             <a href="#resume" className="menu__link">
-                <img className='menu__link-img' src="images/png/resume.png" alt="resume icon" />
+                <img className='menu__link-img' src={isDayTheme ? resumeIconDark : resumeIconLight} alt="resume icon" />
             </a>
             <a href="#skills" className="menu__link">
-                <img className='menu__link-img' src="images/png/skills.png" alt="skills icon" />
+                <img className='menu__link-img' src={isDayTheme ? skillsIconDark : skillsIconLight} alt="skills icon" />
             </a>
             <a href="#portfolio" className="menu__link">
-                <img className='menu__link-img' src="images/png/portfolio.png" alt="portfolio icon" />
-            </a>
-            <a href="#hiring" className="menu__link">
-                <img className='menu__link-img' src="images/png/hr.png" alt="hr icon" />
+                <img className='menu__link-img' src={isDayTheme ? portfolioIconDark : portfolioIconLight} alt="portfolio icon" />
             </a>
             <a href="#feedback" className="menu__link">
-                <img className='menu__link-img' src="images/png/feedback.png" alt="feedback icon" />
+                <img className='menu__link-img' src={isDayTheme ? feedbackIconDark : feedbackIconLight} alt="feedback icon" />
+            </a>
+            <a href="#hiring" className="menu__link">
+                <img className='menu__link-img' src={isDayTheme ? hiringIconDark : hiringIconLight} alt="hr icon" />
             </a>
             <div className="menu__switcher">
                 <div

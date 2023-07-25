@@ -33,21 +33,30 @@ function App() {
       setLang('en')
     }
   }, [isRuLang])
+
+  useEffect(() => {
+    if (isDayTheme) {
+      document.body.style.backgroundColor = null;
+    } else {
+      document.body.style.backgroundColor = '#212529';
+    }
+  }, [isDayTheme])
+
+
+
   return (
     <>
       <div className="app-container">
-        <Menu
-          menuActions={menuActions}
-        />
-        <Info lang={lang} />
-        <Contacts lang={lang} />
-        <Introduce lang={lang} />
-        <About lang={lang} />
-        <Resume lang={lang} />
-        <Skills lang={lang} />
-        <Portfolio lang={lang} />
-        <Feedback lang={lang} />
-        <Hiring lang={lang} />
+        <Menu menuActions={menuActions} isDayTheme={isDayTheme} />
+        <Info lang={lang} isDayTheme={isDayTheme} />
+        <Contacts lang={lang} isDayTheme={isDayTheme} />
+        <Introduce lang={lang} isDayTheme={isDayTheme} />
+        <About lang={lang} isDayTheme={isDayTheme} />
+        <Resume lang={lang} isDayTheme={isDayTheme} />
+        <Skills lang={lang} isDayTheme={isDayTheme} />
+        <Portfolio lang={lang} isDayTheme={isDayTheme} />
+        <Feedback lang={lang} isDayTheme={isDayTheme} />
+        <Hiring lang={lang} isDayTheme={isDayTheme} />
       </div>
     </>
 

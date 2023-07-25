@@ -3,6 +3,7 @@
 $whiteColor: #fff;
 $borderColor: #565656;
 $accentColor: #28e98c;
+$bgColor: #212529;
 
 html {
   scroll-behavior: smooth;
@@ -15,12 +16,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #212529;
+  transition: all .3s ease-in-out;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.light {
+  color: #333;
 }
 
 .container {

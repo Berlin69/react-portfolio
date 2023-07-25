@@ -1,22 +1,39 @@
 import { Title } from '../Title/Title';
 import './About.scss';
 
+import { aboutContent } from '../__data/about-data';
+import { aboutImages } from '../__data/about-data';
 
 export const About = (props) => {
+
+    const { lang, isDayTheme } = props;
+    const {
+        sectionTitle,
+        textBeforeAccent,
+        textAccent,
+        textAbout
+    } = aboutContent[lang];
+
+    const {
+        titleIconLight,
+        titleIconDark
+    } = aboutImages;
+
     return (
         <section className='about'>
             <div className="container">
                 <div className="about__inner" id='about'>
                     <Title
-                        icon={'images/png/about.png'}
-                        title={'ОБО МНЕ'}
+                        icon={isDayTheme ? titleIconDark : titleIconLight}
+                        title={sectionTitle}
+                        isDayTheme={isDayTheme}
                     />
                     <div className="about__content">
-                        <h4 className="about__content-title">
-                            Lorem ipsum dolor sit, amet consectetur <span className='text-accent'>adipisicing elit.</span>
+                        <h4 className={`about__content-title ${isDayTheme ? 'light' : ''}`}>
+                            {textBeforeAccent}<span className='text-accent'>{textAccent}</span>
                         </h4>
                         <p className="about__content-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni natus mollitia perferendis incidunt, praesentium quas neque repellat velit, ab nemo earum corrupti. A possimus totam esse sed molestias magni tempore?
+                            {textAbout}
                         </p>
                     </div>
                 </div>

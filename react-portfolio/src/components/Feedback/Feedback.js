@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Title } from '../Title/Title';
+import '../../index.scss';
 import './Feedback.scss';
 
 import { feedbackContent } from '../__data/feedback-data';
+import { feedbackImages } from '../__data/feedback-data';
 
 export const Feedback = (props) => {
 
-    const { lang } = props;
+    const { lang, isDayTheme } = props;
     const {
         sectionTitle,
         textBeforeAccent,
@@ -14,6 +16,11 @@ export const Feedback = (props) => {
         projectLinkText,
         feedbacks
     } = feedbackContent[lang];
+
+    const {
+        titleIconLight,
+        titleIconDark
+    } = feedbackImages;
 
     const [clickCounter, setClickCounter] = useState(1);
     const [selectedFeedback, setSelectedFeedback] = useState(0);
@@ -41,10 +48,11 @@ export const Feedback = (props) => {
             <div className="container">
                 <div className="feedback__inner">
                     <Title
-                        icon={'images/png/feedback.png'}
+                        icon={isDayTheme ? titleIconDark : titleIconLight}
                         title={sectionTitle}
+                        isDayTheme={isDayTheme}
                     />
-                    <h3 className="resume__title">
+                    <h3 className={`resume__title ${isDayTheme ? 'light' : ''}`}>
                         {textBeforeAccent}<span className='text-accent'>{textAccent}</span>
                     </h3>
 
@@ -56,7 +64,7 @@ export const Feedback = (props) => {
                                     src={feedbacks[selectedFeedback].image}
                                     alt={feedbacks[selectedFeedback].name} />
                                 <div className="feedback__box-content-person-info">
-                                    <h6 className="feedback__box-content-person-name">
+                                    <h6 className={`feedback__box-content-person-name ${isDayTheme ? 'light' : ''}`}>
                                         {feedbacks[selectedFeedback].name}
                                     </h6>
                                     <p className="feedback__box-content-person-company">
@@ -64,10 +72,10 @@ export const Feedback = (props) => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="feedback__box-content-text">
+                            <div className={`feedback__box-content-text ${isDayTheme ? 'light' : ''}`}>
                                 "{feedbacks[selectedFeedback].feedback}"
                             </div>
-                            <a className='feedback__box-content-link' href={feedbacks[selectedFeedback].projectLink} target='_blank' rel='noreferrer'>
+                            <a className={`feedback__box-content-link ${isDayTheme ? 'light' : ''}`} href={feedbacks[selectedFeedback].projectLink} target='_blank' rel='noreferrer'>
                                 {projectLinkText}
                             </a>
                         </div>
