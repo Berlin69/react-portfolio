@@ -26,6 +26,10 @@ code {
 
 .light {
   color: #333;
+
+  & path {
+    fill: #333;
+  }
 }
 
 .container {

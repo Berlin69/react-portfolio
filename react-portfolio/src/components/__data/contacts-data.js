@@ -16,3 +16,11 @@ export const contactsContent = {
     socials: [],
   },
 };
+
+export const contactsLinks = {
+  phone: '995511191035',
+  linkedin: 'https://linkedin.com',
+  telegram: 'https://t.me/vitalii_siziakov',
+  github: 'https://github.com/vitalii-siziakov',
+
+}

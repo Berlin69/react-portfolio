@@ -32,9 +32,12 @@
     &__projects-btn-wrapper {
         margin-top: 70px;
         margin-left: 600px;
+        max-width: 170px;
+        max-height: 170px;
     }
 
     &__projects-btn {
+        display: inline-block;
         background-color: transparent;
         border: none;
         position: relative;
@@ -43,8 +46,8 @@
 
     &__projects-svg-wrapper {
         position: absolute;
-        top: 45px;
-        left: 0;
+        top: 50px;
+        left: 65px;
         bottom: 0;
         right: 0;
 

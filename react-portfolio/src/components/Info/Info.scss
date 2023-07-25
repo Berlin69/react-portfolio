@@ -135,6 +135,14 @@
     }
 }
 
+.light {
+    color: #333;
+
+    & path {
+        fill: #333;
+    }
+}
+
 @media (max-width: 1220px) {
     .info {
         display: block;
