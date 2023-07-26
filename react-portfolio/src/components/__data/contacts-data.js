@@ -1,16 +1,16 @@
 export const contactsContent = {
   ru: {
-    name: 'Виталий Сизяков',
+    name: 'Максим Опрятин',
     jobTitle: 'Frontend-разработчик',
-    email: 'Vitalii.Siziakov@gmail.com',
+    email: 'max_21292@hotmail.com',
     location: 'Тбилиси, Грузия',
     contactLinkTitle: 'Связаться',
     socials: [],
   },
   en: {
-    name: 'Vitalii Siziakov',
+    name: 'Maksim Opriatin',
     jobTitle: 'Front-end Developer',
-    email: 'Vitalii.Siziakov@gmail.com',
+    email: 'max_21292@hotmail.com',
     location: 'Tbilisi, Georgia',
     contactLinkTitle: 'Contact me',
     socials: [],
@@ -19,8 +19,8 @@ export const contactsContent = {
 
 export const contactsLinks = {
   phone: '995511191035',
-  linkedin: 'https://linkedin.com',
-  telegram: 'https://t.me/vitalii_siziakov',
-  github: 'https://github.com/vitalii-siziakov',
+  linkedin: 'https://www.linkedin.com/in/maksim-opriatin-99b2aa1a7/',
+  telegram: 'https://t.me/bettercallmaksim',
+  github: 'https://github.com/berlin69',
 
 }

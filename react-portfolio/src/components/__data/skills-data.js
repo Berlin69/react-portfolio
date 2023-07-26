@@ -24,32 +24,32 @@ export const skillsList = [
     },
     {
         image: 'images/png/JavaScript.png',
-        percent: '80%',
+        percent: '70%',
         name: 'JavaScript',
     },
     {
         image: 'images/png/sass.png',
-        percent: '80%',
+        percent: '70%',
         name: 'Sass/SCSS',
     },
     {
         image: 'images/png/react.png',
-        percent: '80%',
+        percent: '60%',
         name: 'React',
     },
     {
         image: 'images/png/wordpress.png',
-        percent: '80%',
+        percent: '40%',
         name: 'WordPress',
     },
     {
         image: 'images/png/figma.png',
-        percent: '80%',
+        percent: '75%',
         name: 'Figma',
     },
     {
         image: 'images/png/photoshop.png',
-        percent: '80%',
+        percent: '75%',
         name: 'Photoshop',
     },
     {
@@ -59,7 +59,7 @@ export const skillsList = [
     },
     {
         image: 'images/png/webpack.png',
-        percent: '80%',
+        percent: '70%',
         name: 'Webpack',
     },
 ]
