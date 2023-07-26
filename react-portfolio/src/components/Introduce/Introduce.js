@@ -46,7 +46,7 @@ export const Introduce = (props) => {
                         </p>
                     </div>
                     <div className="introduce__projects-btn-wrapper">
-                        <a className="introduce__projects-btn">
+                        <a className="introduce__projects-btn" href='#portfolio'>
                             <img className='projects-spin' src={isDayTheme ? roundedTextDark : roundedTextLight} alt="my projects spining" />
                             <div className={`introduce__projects-svg-wrapper ${isDayTheme ? 'light' : ''}`}>
                                 <svg width={40} height={60} viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
