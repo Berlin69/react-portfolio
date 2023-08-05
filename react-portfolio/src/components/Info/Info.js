@@ -14,7 +14,7 @@ export const Info = (props) => {
             <div className="container">
                 <div className="info__inner">
                     <div className="info__person">
-                        <img className='info__person-img' src="images/jpg/avatar.jpg" alt={name} />
+                        <img className='info__person-img' src="images/png/maksim.png" alt={name} />
                         <div className="info__person-info">
                             <h3 className={`info__job-title ${isDayTheme ? 'light' : ''}`}>{jobTitle}</h3>
                             <h2 className={`info__name ${isDayTheme ? 'light' : ''}`}>{name}</h2>
