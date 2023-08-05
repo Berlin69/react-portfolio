@@ -14,7 +14,7 @@ export function Contacts(props) {
         <h2 className={`contacts__name ${isDayTheme ? 'light' : ''}`}>{name}</h2>
       </div>
 
-      <img className='contacts__avatar' src="images/jpg/avatar.jpg" alt="" />
+      <img className='contacts__avatar' src="images/png/maksim.png" alt={name} />
 
       <a className={`contacts__email ${isDayTheme ? 'light' : ''}`} href={`mailto:${email}`}>{email}</a>
       <div className='contacts__communication-wrapper'>

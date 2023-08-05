@@ -33,8 +33,8 @@ export const feedbackContent = {
     },
     en: {
         sectionTitle: 'Feedback',
-        textBeforeAccent: 'feedback about ',
-        textAccent: 'working with me',
+        textBeforeAccent: 'Feedback About ',
+        textAccent: 'Work With Me',
         projectLinkText: 'Project',
         feedbacks: [
             {

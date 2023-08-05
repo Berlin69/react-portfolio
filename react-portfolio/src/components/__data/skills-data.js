@@ -54,12 +54,12 @@ export const skillsList = [
     },
     {
         image: 'images/png/gulp.png',
-        percent: '80%',
+        percent: '40%',
         name: 'Gulp',
     },
     {
         image: 'images/png/webpack.png',
-        percent: '70%',
+        percent: '40%',
         name: 'Webpack',
     },
 ]
