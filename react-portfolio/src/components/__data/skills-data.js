@@ -13,7 +13,7 @@ export const skillsContent = {
 
 export const skillsList = [
     {
-        image: 'images/png/html5.png',
+        image: 'images/png/HTML5.png',
         percent: '80%',
         name: 'HTML',
     },
