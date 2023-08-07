@@ -15,7 +15,7 @@ import { Info } from './components/Info/Info';
 
 
 function App() {
-  const [lang, setLang] = useState('ru');
+  const [lang, setLang] = useState('en');
   const [isDayTheme, setIsDayTheme] = useState(false);
   const [isRuLang, setIsRuLang] = useState(true);
 
